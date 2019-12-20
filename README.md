@@ -1,30 +1,21 @@
-# Twitter Sentiment Analysis
+# Twitter Sentiment Analysis 
+Process of analysing whether a given text is sentimentally Positive, Negative or Neutral is called Sentiment Analysis
 
-Project aim to analyze the tweets from the twitter and predicting whether tweet is Positive or Negative or Neutral to perform further goals
+> US Commerce Department blacklisted Chinese Multinational Technology Company Huawei due to Security concern or may be other relationship issues with Chinese Government.<br>
+Analysing this event with following Python libraries from Twitter.
 
-## Prerequisties
+[*Twitter Scrapper*](https://pypi.org/project/twitterscraper/0.2.7/) is used to scrape tweets from twitter without signing in and requesting for developers account with informative parameter as *Begining Date, Ending Date*, *Number of Tweets* etc.<br>
+[*LangDetect*](https://pypi.org/project/langdetect/) support language detection, to filter language for user convenience & support.<br>
+[*VADER*](https://pypi.org/project/vaderSentiment/) i.e Valence Aware Dictionary and sEntiment Reasoner is a modern usage sentiment analysis tools used escpecially to analyse, obtain social media expression with advanced feature of extracting information from emoji's too.
 
-```sh
-pip install tweepy
+
+## Dependencies
+``` sh 
+$ pip install vaderSentiment
+$ pip install langdetect
+$ pip install twitterscraper==0.2.7
+$ pip install matplotlib
+$ pip install pandas
 ```
-```sh
-pip install textblob
-```
-Need to create developers account from [here](https://dev.twitter.com/apps/new).
-
-Enter the necessary information such as Application Name and Description.
-
-Search for the option ```Keys and Tokens```
-copy ```Consumer API keys``` and ```Access token & access token secret```
-
-## Output
-
-For every given topic in output two sentiments can be witnessed in decimal value i.e
-```Polarity``` and ```Subjectivity```
-- ```Polarity```  refers to how Positive or Negative the sentence is 
-- ```Subjectivity``` express personal feelings, views or beliefs  
-
-## Author
- 
-- Inspired by [edureka!](https://www.youtube.com/watch?v=27P268Q7pE0)
-- [Prasad Patil](https://linkedin.com/in/prasadpatil99)
+## Author 
+- Prasad Patil
